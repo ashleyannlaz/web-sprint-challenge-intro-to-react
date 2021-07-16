@@ -3,6 +3,15 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import CharDetails from './CharDetails'
 
+const CharContainer = styled.section`
+border: solid 1px black;
+padding: 10px;
+margin-bottom: 10px;
+`
+const CharName = styled.h3`
+text-transform: uppercase;
+`
+
 const Character = (props) => {
     const { character } = props;
     const [showChar, setShowChar] = useState(false)
@@ -10,13 +19,8 @@ const Character = (props) => {
 
     return (
         <div>
-
-        <div onClick={onClick}>
-        {character.name} {showChar ? <CharDetails character={character} /> : null}</div>
-
-        
-
-
+        <CharContainer onClick={onClick}>
+        <CharName>{character.name}</CharName> {showChar ? <CharDetails character={character} /> : null}</CharContainer>
         </div>
     )
 }

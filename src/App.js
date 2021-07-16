@@ -11,10 +11,16 @@ const Container = styled.section`
   width: 100%;
 `
 const CharInfo = styled.section`
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
   padding: 10px;
   width: 40%;
+`
+const Header = styled.h1`
+  color: #443e3e;
+  text-shadow: 1px 1px 5px #fff;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  font-size: 3rem;
 `
 
 const App = () => {
@@ -31,7 +37,7 @@ const [character, setCharacter] = useState([])
 
   return (
     <Container>
-        <h1 className="Header">REACT WARS</h1>
+        <Header>REACT WARS</Header>
         <CharInfo>
         <div>
         {character.map((character, key) => (
