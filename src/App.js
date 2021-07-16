@@ -8,12 +8,8 @@ const Container = styled.section`
   display: flex; 
   flex-direction: column;
   align-items: center;
-  width: 100%;
 `
 const CharInfo = styled.section`
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 10px;
-  padding: 10px;
   width: 40%;
 `
 const Header = styled.h1`
@@ -39,10 +35,8 @@ const [character, setCharacter] = useState([])
     <Container>
         <Header>REACT WARS</Header>
         <CharInfo>
-        <div>
         {character.map((character, key) => (
         <Character key={key} character={character} />))}
-        </div>
         </CharInfo>
       </Container>
 
